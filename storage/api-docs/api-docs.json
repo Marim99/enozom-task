@@ -1,0 +1,72 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/products/{product_id}": {},
+        "/api/trips": {
+            "get": {
+                "tags": [
+                    "Trips"
+                ],
+                "summary": "Get trips for a specific route",
+                "operationId": "getTrips",
+                "parameters": [
+                    {
+                        "name": "from_station",
+                        "in": "query",
+                        "description": "The ID  of the departure station",
+                        "required": true,
+                        "schema": {
+                            "type": "bigint"
+                        }
+                    },
+                    {
+                        "name": "to_station",
+                        "in": "query",
+                        "description": "The ID of the destination station",
+                        "required": true,
+                        "schema": {
+                            "type": "bigint"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "trips": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "description": "The trip ID",
+                                                        "type": "integer"
+                                                    },
+                                                    "train_name": {
+                                                        "description": "The name of the train",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "No trains for this route"
+                    }
+                }
+            }
+        }
+    }
+}

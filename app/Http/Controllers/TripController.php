@@ -18,12 +18,52 @@ class TripController extends Controller
         $this->tripService = new TripService();
     }
 
-
+/**
+ * @OA\Get(
+ *     path="/api/trips",
+ *     operationId="getTrips",
+ *     summary="Get trips for a specific route",
+ *     tags={"Trips"},
+ *     @OA\Parameter(
+ *         name="from_station",
+ *         in="query",
+ *         required=true,
+ *         @OA\Schema(
+ *             type="bigint"
+ *         ),
+ *         description="The ID  of the departure station"
+ *     ),
+ *     @OA\Parameter(
+ *         name="to_station",
+ *         in="query",
+ *         required=true,
+ *         @OA\Schema(
+ *             type="bigint"
+ *         ),
+ *         description="The ID of the destination station"
+ *     ),
+ *     @OA\Response(
+ *         response="200",
+ *         description="Success",
+ *         @OA\JsonContent(
+ *             @OA\Property(
+ *                 property="trips",
+ *                 type="array",
+ *                 @OA\Items(
+ *                     @OA\Property(property="id", type="integer", description="The trip ID"),
+ *                     @OA\Property(property="train_name", type="string", description="The name of the train")
+ *                 )
+ *             )
+ *         )
+ *     ),
+ *     @OA\Response(response="404", description="No trains for this route")
+ * )
+ */
     public function getTrips(Request $request)
     {
         // Validate the input
     try {
-        
+
             $request->validate([
                 'from_station' => 'required',
                 'to_station' => 'required',
