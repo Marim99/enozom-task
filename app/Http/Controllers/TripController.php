@@ -28,9 +28,8 @@ class TripController extends Controller
 
         $fromStation = $request->input('from_station');
         $toStation = $request->input('to_station');
-        $fromStationId = Station::where('name', $fromStation)->value('id');
-        $toStationId = Station::where('name', $toStation)->value('id');
-        // Call the service method to retrieve trips
+        $fromStationId = Station::where('id', $fromStation)->value('id');
+        $toStationId = Station::where('id', $toStation)->value('id');
         $trips = $this->tripService->getTripsByStations($fromStationId, $toStationId);
 
         if ($trips->isEmpty()) {
