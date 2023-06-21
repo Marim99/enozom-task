@@ -15,30 +15,12 @@ class TripSeeder extends Seeder
     {
         //
         $trips = [
-            ['train_id'=>'1','from_station_id'=>'1','to_station_id'=>'5','arrive_time1'=>'07:00:00','arrive_time2'=>'09:00:00'],
-            ['train_id'=>'1','from_station_id'=>'5','to_station_id'=>'1','arrive_time1'=>'07:00:00','arrive_time2'=>'09:00:00'],
-            ['train_id'=>'2','from_station_id'=>'1','to_station_id'=>'3','arrive_time1'=>'07:30:00','arrive_time2'=>'08:30:00'],
-            ['train_id'=>'2','from_station_id'=>'1','to_station_id'=>'4','arrive_time1'=>'07:30:00','arrive_time2'=>'09:30:00'],
-            ['train_id'=>'2','from_station_id'=>'1','to_station_id'=>'5','arrive_time1'=>'07:30:00','arrive_time2'=>'10:30:00'],
-            ['train_id'=>'2','from_station_id'=>'3','to_station_id'=>'4','arrive_time1'=>'08:30:00','arrive_time2'=>'09:30:00'],
-            ['train_id'=>'2','from_station_id'=>'3','to_station_id'=>'5','arrive_time1'=>'08:30:00','arrive_time2'=>'10:30:00'],
-            ['train_id'=>'2','from_station_id'=>'4','to_station_id'=>'5','arrive_time1'=>'09:30:00','arrive_time2'=>'10:30:00'],
-            ['train_id'=>'2','from_station_id'=>'5','to_station_id'=>'4','arrive_time1'=>'07:00:00','arrive_time2'=>'07:30:00'],
-            ['train_id'=>'2','from_station_id'=>'5','to_station_id'=>'3','arrive_time1'=>'07:00:00','arrive_time2'=>'08:30:00'],
-            ['train_id'=>'2','from_station_id'=>'5','to_station_id'=>'2','arrive_time1'=>'07:00:00','arrive_time2'=>'09:30:00'],
-            ['train_id'=>'2','from_station_id'=>'5','to_station_id'=>'1','arrive_time1'=>'07:00:00','arrive_time2'=>'11:30:00'],
-            ['train_id'=>'2','from_station_id'=>'4','to_station_id'=>'3','arrive_time1'=>'07:30:00','arrive_time2'=>'08:30:00'],
-            ['train_id'=>'2','from_station_id'=>'4','to_station_id'=>'2','arrive_time1'=>'07:30:00','arrive_time2'=>'09:30:00'],
-            ['train_id'=>'2','from_station_id'=>'4','to_station_id'=>'1','arrive_time1'=>'07:30:00','arrive_time2'=>'10:30:00'],
-            ['train_id'=>'2','from_station_id'=>'3','to_station_id'=>'2','arrive_time1'=>'08:30:00','arrive_time2'=>'09:30:00'],
-            ['train_id'=>'2','from_station_id'=>'3','to_station_id'=>'1','arrive_time1'=>'08:30:00','arrive_time2'=>'10:30:00'],
-            ['train_id'=>'2','from_station_id'=>'2','to_station_id'=>'1','arrive_time1'=>'09:30:00','arrive_time2'=>'10:30:00'],
-            ['train_id'=>'3','from_station_id'=>'1','to_station_id'=>'3','arrive_time1'=>'09:00:00','arrive_time2'=>'10:15:00'],
-            ['train_id'=>'3','from_station_id'=>'1','to_station_id'=>'5','arrive_time1'=>'09:00:00','arrive_time2'=>'11:30:00'],
-            ['train_id'=>'3','from_station_id'=>'3','to_station_id'=>'5','arrive_time1'=>'10:15:00','arrive_time2'=>'11:30:00'],
-            ['train_id'=>'3','from_station_id'=>'5','to_station_id'=>'3','arrive_time1'=>'09:00:00','arrive_time2'=>'10:15:00'],
-            ['train_id'=>'3','from_station_id'=>'5','to_station_id'=>'1','arrive_time1'=>'09:00:00','arrive_time2'=>'11:30:00'],
-            ['train_id'=>'3','from_station_id'=>'3','to_station_id'=>'1','arrive_time1'=>'10:15:00','arrive_time2'=>'11:30:00'],       
+            ['train_id'=>'1'],
+            ['train_id'=>'2'],
+            ['train_id'=>'3'],
+            ['train_id'=>'1'],
+            ['train_id'=>'2'],
+            ['train_id'=>'3'],    
         ];
 
         foreach($trips as $trip){

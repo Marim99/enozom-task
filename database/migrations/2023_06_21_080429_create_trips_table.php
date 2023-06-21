@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('trips', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('from_station_id');
-            $table->unsignedBigInteger('to_station_id');
+            // $table->unsignedBigInteger('from_station_id');
+            // $table->unsignedBigInteger('to_station_id');
             $table->unsignedBigInteger('train_id')->nullable(false);
-            $table->time('arrive_time1');
-            $table->time('arrive_time2');
-            $table->foreign('from_station_id')->references('id')->on('stations');
-            $table->foreign('to_station_id')->references('id')->on('stations');
+            // $table->time('arrive_time1');
+            // $table->time('arrive_time2');
+            // $table->foreign('from_station_id')->references('id')->on('stations');
+            // $table->foreign('to_station_id')->references('id')->on('stations');
+            $table->foreign('train_id')->references('id')->on('trains');
             $table->timestamps();
         });
     }

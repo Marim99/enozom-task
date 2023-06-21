@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Route;
 use App\Models\Trip;
+use App\Models\TripRoute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,5 +23,10 @@ class Station extends Model
 public function toRoutes()
 {
     return $this->hasMany(Trip::class, 'to_station_id');
+}
+
+public function tripRoute()
+{
+    return $this->hasMany(TripRoute::class);
 }
 }
