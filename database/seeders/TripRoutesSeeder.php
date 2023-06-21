@@ -14,7 +14,6 @@ class TripRoutesSeeder extends Seeder
     public function run(): void
     {
         //
-                //
                 $trips = [
                     ['trip_id'=>'1','station_id'=>'1','arrive_time'=>'07:00:00'],
                     ['trip_id'=>'1','station_id'=>'5','arrive_time'=>'09:00:00'],
